@@ -1,5 +1,6 @@
 # NewsX
-**This is the upgraded version of NewsX**
+**This is the upgraded version of NewsX** <br> <br>
+**[[Preview]: news--x.vercel.app ](https://newsx--vercel.app)**
 - This a news app created with the following stack:
     1. React/NextJs
     2. Typescript

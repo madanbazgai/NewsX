@@ -1,4 +1,11 @@
-type Article = {
+type Pagination = {
+    count: Int;
+    offset: Int;
+    limit: Int;
+    total: Int;
+  };
+  
+  type Article = {
     author: string | null;
     category: string;
     country: string;
@@ -9,18 +16,19 @@ type Article = {
     source: string;
     title: string;
     url: string;
-};
-
-type NewsResponse = {
+  };
+  
+  type NewsResponse = {
     pagination: Pagination;
     data: Article[];
-};
-
-type Category =
-    "business"
+  };
+  
+  type Category =
+    | "business"
     | "entertainment"
     | "general"
     | "health"
     | "science"
     | "sports"
     | "technology";
+  

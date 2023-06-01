@@ -48,7 +48,6 @@ const fetchNews = async (
     "https://makaticity.stepzen.net/api/inclined-angelfish/__graphql",
     {
       method: "POST",
-      cache: isDynamic ? "no-cache" : "default",
       next: isDynamic ? { revalidate: 0 } : { revalidate: 180 },
       headers: {
         "Content-Type": "application/json",

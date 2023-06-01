@@ -7,6 +7,10 @@ type Props = {
   params: { category: Category };
 };
 
+export async function generateStaticParams() {
+  return categories.map((category) => ({ category: category }));
+}
+
 async function NewsCategory({ params: { category } }: Props) {
   const news: NewsResponse = await fetchNews(category);
 
@@ -20,6 +24,4 @@ async function NewsCategory({ params: { category } }: Props) {
 
 export default NewsCategory;
 
-export async function generateStaticParams() {
-  return categories.map((category) => ({ category: category }));
-}
+
